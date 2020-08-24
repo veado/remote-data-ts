@@ -7,7 +7,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "tsc -p ./tsconfig.build.json && tsc -p ./tsconfig.es6.json",
-    "test": "npm run tslint && npm run prettier && npm run jest",
+    "test": "npm run jest",
     "tslint": "tslint -c tslint.json --project tsconfig.json './src/**/*.ts'",
     "jest": "jest",
     "prettier": "prettier --list-different \"./src/**/*.ts\"",
@@ -23,10 +23,12 @@
     "@devexperts/lint": "^0.29.1",
     "@types/jest": "^22.2.3",
     "conventional-changelog-cli": "^2.0.21",
+    "fp-ts-rxjs": "^0.6.9",
     "import-path-rewrite": "github:gcanti/import-path-rewrite",
     "jest": "^24.8.0",
     "jest-cli": "^24.8.0",
     "prettier": "^1.17.1",
+    "rxjs": "^6.6.2",
     "ts-jest": "^23.10.5",
     "tslint": "^5.16.0",
     "tslint-config-prettier": "^1.18.0",
@@ -38,6 +40,10 @@
     "io-ts": "^2.0.0",
     "io-ts-types": "^0.5.7",
     "tslib": "^1.9.3"
+  },
+  "peerDependencies": {
+    "fp-ts-rxjs": "^0.6.9",
+    "rxjs": "^6.6.2"
   },
   "repository": {
     "type": "git",
